@@ -1,0 +1,541 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license
+-->
+<html>
+	<head>
+		<title>Individual Project | Cloud Operations and Management</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">
+					<strong>Cloud Operations</strong>
+					<span>e-Portfolio</span>
+				</a>
+
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="units.html">Units 1–12</a></li>
+					<li><a href="group-project.html">Group Project</a></li>
+					<li><a href="unit11-project.html">Unit 11 Project</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main" class="alt">
+
+				<section id="one">
+					<div class="inner">
+
+						<header class="major">
+							<h1>Individual Project</h1>
+						</header>
+
+						<h2>Cloud Strategy Assessment for CareLink Health</h2>
+
+						<p>
+							This individual project focused on developing a complete cloud strategy
+							for <strong>CareLink Health</strong>, a hypothetical medium-sized private
+							healthcare provider operating several clinics across the United Kingdom.
+						</p>
+
+						<p>
+							The organisation was assumed to rely on a mixture of clinic-based servers
+							and disconnected cloud services, creating challenges related to
+							scalability, resilience, security, regulatory compliance and cost
+							management.
+						</p>
+
+						<hr />
+
+						<header class="major">
+							<h2>Project Overview</h2>
+						</header>
+
+						<p>
+							The proposed solution was a phased <strong>hybrid-cloud strategy centred
+							on Microsoft Azure</strong>, while retaining selected on-premises systems
+							where legacy applications, medical-device dependencies or latency
+							requirements made immediate migration unsuitable.
+						</p>
+
+						<p>
+							The project examined cloud architecture, Infrastructure as Code using
+							Terraform, automation, artificial intelligence, hybrid-cloud integration,
+							disaster recovery, cybersecurity and regulatory compliance.
+						</p>
+
+						<p>
+							Rather than treating cloud migration as a purely technical exercise, the
+							project considered how technical architecture should support wider
+							business objectives, including service availability, patient experience,
+							cost control, security and future scalability.
+						</p>
+
+						<hr />
+
+						<header class="major">
+							<h2>Business and Technical Objectives</h2>
+						</header>
+
+						<p>
+							The cloud strategy was designed around measurable objectives rather than
+							general improvements. The main targets proposed for CareLink Health were:
+						</p>
+
+						<ul>
+							<li>99.95% availability for patient-facing services.</li>
+							<li>A Recovery Time Objective (RTO) of four hours.</li>
+							<li>A Recovery Point Objective (RPO) of 15 minutes for critical transactional data.</li>
+							<li>At least 80% of infrastructure changes delivered through approved IaC pipelines.</li>
+							<li>A target reduction of 15% in avoidable infrastructure expenditure within 18 months.</li>
+						</ul>
+
+						<p>
+							These objectives helped make the cloud transformation measurable and
+							allowed technical decisions to be evaluated against business outcomes.
+						</p>
+
+						<hr />
+
+						<header class="major">
+							<h2>Proposed Cloud Architecture</h2>
+						</header>
+
+						<p>
+							A hybrid architecture was selected because not every healthcare workload
+							is equally suitable for immediate public-cloud migration. Patient-facing
+							applications, analytics and new digital services would move to Azure,
+							while systems dependent on local medical hardware or specialist legacy
+							software could remain within individual clinics.
+						</p>
+
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>Architecture Layer</th>
+										<th>Technology</th>
+										<th>Purpose</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>User Access</td>
+										<td>Azure App Service</td>
+										<td>Appointment booking and telemedicine applications</td>
+									</tr>
+
+									<tr>
+										<td>Identity</td>
+										<td>Microsoft Entra ID</td>
+										<td>Authentication, MFA and role-based access control</td>
+									</tr>
+
+									<tr>
+										<td>Transactional Data</td>
+										<td>Azure SQL Database</td>
+										<td>Managed storage for critical application data</td>
+									</tr>
+
+									<tr>
+										<td>File Storage</td>
+										<td>Azure Storage</td>
+										<td>Documents and non-transactional content</td>
+									</tr>
+
+									<tr>
+										<td>Security</td>
+										<td>Azure Key Vault / Private Endpoints</td>
+										<td>Protection of credentials, keys and internal services</td>
+									</tr>
+
+									<tr>
+										<td>Hybrid Connectivity</td>
+										<td>VPN / ExpressRoute</td>
+										<td>Secure communication between clinics and Azure</td>
+									</tr>
+
+									<tr>
+										<td>Hybrid Management</td>
+										<td>Azure Arc</td>
+										<td>Central governance of retained on-premises systems</td>
+									</tr>
+
+									<tr>
+										<td>Monitoring</td>
+										<td>Azure Monitor</td>
+										<td>Performance, availability and security monitoring</td>
+									</tr>
+
+									<tr>
+										<td>Infrastructure Deployment</td>
+										<td>Terraform + CI/CD</td>
+										<td>Repeatable and auditable infrastructure provisioning</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<hr />
+
+						<header class="major">
+							<h2>Infrastructure as Code and Automation</h2>
+						</header>
+
+						<p>
+							Terraform was selected as the primary Infrastructure as Code tool.
+							Reusable modules would define networking, application services,
+							databases, monitoring and access controls. This allows environments to
+							be deployed repeatedly from version-controlled configuration rather than
+							being manually created through a graphical interface.
+						</p>
+
+						<p>
+							Infrastructure changes would follow a
+							<strong>plan → review → approve → apply</strong> workflow.
+							Automated security checks and policy validation would be performed before
+							production deployment, helping to reduce configuration errors and
+							unauthorised infrastructure changes.
+						</p>
+
+						<p>
+							Automation would also support patching, backup verification, compliance
+							checking, monitoring and deployment. However, high-impact actions affecting
+							clinical systems would retain human approval to reduce the risk of
+							automation causing operational disruption.
+						</p>
+
+						<hr />
+
+						<header class="major">
+							<h2>Artificial Intelligence Integration</h2>
+						</header>
+
+						<p>
+							AI was introduced initially through lower-risk operational use cases rather
+							than autonomous clinical decision-making.
+						</p>
+
+						<p>
+							Historical appointment volumes, cancellations, clinic capacity and
+							seasonal patterns could be analysed using a forecasting model to predict
+							future demand. This information could help CareLink improve staffing and
+							appointment allocation.
+						</p>
+
+						<p>
+							A second use case involved analysing infrastructure and security telemetry
+							for abnormal behaviour. AI-assisted monitoring could help technical teams
+							identify unusual authentication patterns, performance degradation or
+							resource consumption before these develop into more serious incidents.
+						</p>
+
+						<p>
+							I deliberately separated operational AI from clinical AI because the
+							consequences of an inaccurate staffing forecast are significantly lower
+							than the consequences of an incorrect diagnosis or treatment recommendation.
+							Clinical AI would therefore require additional validation, governance,
+							bias testing, auditing and human oversight.
+						</p>
+
+						<hr />
+
+						<header class="major">
+							<h2>Security and Compliance</h2>
+						</header>
+
+						<p>
+							Security was a central consideration because healthcare information is
+							classified as special category personal data under UK GDPR.
+						</p>
+
+						<p>
+							The proposed environment followed Zero Trust principles, including
+							multi-factor authentication, least-privilege access, role-based access
+							control, managed identities, encryption and privileged-access reviews.
+						</p>
+
+						<p>
+							The project also considered UK healthcare-specific governance, including
+							the Caldicott Principles, NCSC Cloud Security Principles and the NHS Data
+							Security and Protection Toolkit where applicable.
+						</p>
+
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>Risk</th>
+										<th>Impact</th>
+										<th>Main Mitigation</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>Ransomware or destructive attack</td>
+										<td>Critical</td>
+										<td>MFA, segmentation, isolated backups and tested recovery</td>
+									</tr>
+
+									<tr>
+										<td>Cloud or IaC misconfiguration</td>
+										<td>High</td>
+										<td>Peer review, IaC scanning and Policy-as-Code</td>
+									</tr>
+
+									<tr>
+										<td>Regional cloud outage</td>
+										<td>Critical</td>
+										<td>Availability zones, replicated data and DR testing</td>
+									</tr>
+
+									<tr>
+										<td>Data breach</td>
+										<td>Critical</td>
+										<td>Encryption, RBAC, access reviews and central logging</td>
+									</tr>
+
+									<tr>
+										<td>Connectivity failure</td>
+										<td>High</td>
+										<td>Redundant connections and local degraded-mode procedures</td>
+									</tr>
+
+									<tr>
+										<td>Vendor dependency</td>
+										<td>Medium</td>
+										<td>Exit planning, standard formats and portable IaC</td>
+									</tr>
+
+									<tr>
+										<td>AI error or bias</td>
+										<td>High if clinical</td>
+										<td>Validation, monitoring and human oversight</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<hr />
+
+						<header class="major">
+							<h2>Migration Strategy</h2>
+						</header>
+
+						<p>
+							The migration was divided into three phases to reduce operational risk.
+						</p>
+
+						<h3>Phase 1 – Months 0–6</h3>
+						<p>
+							Establish identity, connectivity, logging, Terraform modules, security
+							policies, monitoring and disaster recovery standards.
+						</p>
+
+						<h3>Phase 2 – Months 6–12</h3>
+						<p>
+							Migrate lower-dependency workloads such as online booking, telemedicine
+							and selected analytics services.
+						</p>
+
+						<h3>Phase 3 – Months 12–24</h3>
+						<p>
+							Modernise legacy clinical systems only where testing demonstrates that
+							device integration, latency, security and continuity requirements can
+							be maintained.
+						</p>
+
+						<p>
+							This phased strategy reduced the risk associated with attempting a
+							large-scale cloud migration at once and allowed CareLink to retain
+							on-premises systems where there was still a strong technical or clinical
+							justification.
+						</p>
+
+						<hr />
+
+						<header class="major">
+							<h2>Future Recommendations</h2>
+						</header>
+
+						<p>
+							The project also considered how the proposed cloud platform could evolve
+							beyond the initial migration.
+						</p>
+
+						<h3>Edge Computing</h3>
+						<p>
+							During years 1–3, edge computing could support remote patient monitoring
+							and connected medical devices. Local gateways could process basic
+							telemetry close to the device before transmitting relevant data to cloud
+							services.
+						</p>
+
+						<h3>Privacy-Preserving Technologies</h3>
+						<p>
+							Federated learning and confidential computing could later allow
+							collaboration between clinics without unnecessarily centralising raw
+							patient data.
+						</p>
+
+						<h3>Quantum Cloud</h3>
+						<p>
+							Quantum computing was placed in the longer-term research horizon rather
+							than the production roadmap. CareLink could monitor developments and
+							experiment with specialised optimisation problems, but production
+							healthcare workloads should only adopt quantum technologies when clear
+							technical and business value can be demonstrated.
+						</p>
+
+						<hr />
+
+						<header class="major">
+							<h2>Reflection</h2>
+						</header>
+
+						<p>
+							This project helped me bring together many of the topics studied
+							throughout the module. Instead of evaluating cloud technologies
+							individually, I had to consider how architecture, security, automation,
+							AI, compliance, disaster recovery and cost management interact within
+							a single organisational strategy.
+						</p>
+
+						<p>
+							One of the main lessons I learned was that selecting cloud technology
+							requires evaluating trade-offs. A more technically advanced service is
+							not always the best option. For example, App Service was more appropriate
+							than Kubernetes for the initial patient-facing applications because it
+							provided the required scalability without unnecessary orchestration
+							complexity.
+						</p>
+
+						<p>
+							I also developed a stronger understanding of the importance of measurable
+							objectives. Defining availability, RTO, RPO, cost and automation targets
+							made it possible to evaluate whether the cloud strategy actually delivered
+							business value.
+						</p>
+
+						<p>
+							Overall, the project strengthened my ability to approach cloud computing
+							as both a technical and strategic discipline rather than simply a
+							collection of individual services.
+						</p>
+
+						<hr />
+
+						<header class="major">
+							<h2>Artefacts / Evidence</h2>
+						</header>
+
+						<p>
+							<strong>Development Individual Project:</strong><br />
+							Cloud Strategy Assessment for CareLink Health
+						</p>
+
+						<p>
+							<strong>Module:</strong><br />
+							Cloud Operations and Management
+						</p>
+
+						<p>
+							<strong>Project Type:</strong><br />
+							Individual Assessment
+						</p>
+
+						<p>
+							<strong>Weighting:</strong><br />
+							40%
+						</p>
+
+						<p>
+							<strong>Word Count:</strong><br />
+							Approximately 2,000 words
+						</p>
+
+						<p>
+							<strong>Supporting Evidence:</strong><br />
+							Cloud strategy report, architecture evaluation, risk assessment,
+							compliance research, migration roadmap and future technology analysis.
+						</p>
+
+						<ul class="actions">
+							<li>
+								<a href="group-project.html" class="button">
+									Previous: Group Project
+								</a>
+							</li>
+
+							<li>
+								<a href="index.html" class="button next">
+									Return Home
+								</a>
+							</li>
+						</ul>
+
+					</div>
+				</section>
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<ul class="icons">
+						<li>
+							<a href="https://github.com/FOGLADY"
+							   class="icon brands alt fa-github"
+							   target="_blank">
+								<span class="label">GitHub</span>
+							</a>
+						</li>
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; Cloud Operations and Management e-Portfolio</li>
+						<li>
+							Design:
+							<a href="https://html5up.net">HTML5 UP</a>
+						</li>
+					</ul>
+
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
